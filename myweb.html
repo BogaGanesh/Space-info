@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>New Website</title>
+    <style>
+        body {
+            background-image: url("space.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+           }
+
+        .spacex {
+            color: yellow;
+            padding: 50px;
+        }
+
+        .image-container, .samples {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        img {
+            height: 250px;
+            width: auto;
+            border: 3px solid gray;
+            border-radius: 10px;
+            loading: lazy;
+        }
+
+        h2 {
+            margin-top: 10px;
+        }
+ </style>
+    
+<script>
+        function msg() {
+            confirm("Do you like this website? Click OK to continue.");
+        }
+        
+        function highlightImage(img) {
+            img.style.border = "3px solid yellow";
+        }
+        
+        function resetImage(img) {
+            img.style.border = "3px solid gray";
+        }
+</script>
+</head>
+<body onload="msg()">
+    <div class="spacex">
+        <h1><marquee direction="right" scrollamount="10">SPACE INFO</marquee></h1>
+    </div>
+
+    <div class="image-container">
+        <div>
+            <a href="multiverse.html" target="_blank"><img src="multiverse.jpg" alt="Multiverse" onmouseover="highlightImage(this)" onmouseout="resetImage(this)"></a>
+            <h2>Multiverse</h2>
+        </div>
+        <div>
+            <a href="einstein.html" target="_blank"><img src="wormhole.jpg" alt="Einstein Rosen Bridge" onmouseover="highlightImage(this)" onmouseout="resetImage(this)"></a>
+            <h2>Einstein Rosen Bridge</h2>
+        </div>
+        <div>
+            <a href="sigularity1.html" target="_blank"><img src="sigularity.jpg" alt="Singularity" onmouseover="highlightImage(this)" onmouseout="resetImage(this)"></a>
+            <h2>Singularity</h2>
+        </div>
+    </div>
+    
+    <br><br><br>
+    
+    <div class="samples">
+        <div>
+            <a href="quantum.html" target="_blank"><img src="quantum.jpg" alt="Quantum Entanglement" onmouseover="highlightImage(this)" onmouseout="resetImage(this)"></a>
+            <h2>Quantum Entanglement</h2>
+        </div>
+        <div>
+            <a href="black.html" target="_blank"><img src="black.jpg" alt="Black Hole" onmouseover="highlightImage(this)" onmouseout="resetImage(this)"></a>
+            <h2>Black Hole</h2>
+        </div>
+        <div>
+            <a href="dark.html" target="_blank"><img src="dark.jpg" alt="Dark Matter" onmouseover="highlightImage(this)" onmouseout="resetImage(this)"></a>
+            <h2>Dark Matter</h2>
+        </div>
+    </div>
+</body>
+</html>
